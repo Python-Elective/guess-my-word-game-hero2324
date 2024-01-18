@@ -51,7 +51,12 @@ def is_word_guessed(secret_word, letters_guessed):
     '''
     # FILL IN YOUR CODE HERE...
     pass
-
+    # # Pseudocode
+    # for every letter in secret_word
+    #     check if letter is not in letters_guessed
+    #       stop looking and return False
+    
+    # All letters guessed corretly, so return True
 
 ### Testcases
 # print(is_word_guessed('apple', ['a', 'e', 'i', 'k', 'p', 'r', 's']))
@@ -84,8 +89,14 @@ def get_available_letters(letters_guessed):
       yet been guessed.
     '''
     # FILL IN YOUR CODE HERE...   
-    pass
+    # pass
+    import string
+    alphabet = string. ascii_lowercase
 
+    for letter in letters_guessed:
+        alphabet = alphabet.replace(letter, '')
+
+    return alphabet
 
 
 #Testcases 
